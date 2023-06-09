@@ -2,7 +2,14 @@
 /* style switcher */
 
 const styleSwitcherToggle = () => {
+    const styleSwitcher = document.querySelector(".js-style-switcher");
+    const styleSwitcherToggler = document.querySelector(".js-style-switcher-toggler");
 
+    styleSwitcherToggler.addEventListener("click", function() {
+        styleSwitcher.classList.toggle("open");
+        this.querySelector("i").classList.toggle("fa-times");
+        this.querySelector("i").classList.toggle("fa-cog");
+    });
 }
 styleSwitcherToggle();
 
